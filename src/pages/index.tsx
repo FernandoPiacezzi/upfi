@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
         <CardList cards={formattedData} />
         {hasNextPage && (
           <Button isLoading={isFetchingNextPage} onClick={loadImages}>
-            Carregar mais imagens
+            Carregar mais
           </Button>
         )}
       </Box>
