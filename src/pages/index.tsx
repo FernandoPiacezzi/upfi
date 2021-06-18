@@ -9,7 +9,7 @@ import { Loading } from '../components/Loading';
 import { Error } from '../components/Error';
 
 export default function Home(): JSX.Element {
-  const fetchImages = async ({ pageParam = null }) => {
+  const fetchImages = async ({ pageParam = null }): Promise<any> => {
     const response = await api.get(`/api/images`, {
       params: {
         after: pageParam,
@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
   }, [data]);
 
   // TODO RENDER LOADING SCREEN
-  async function loadImages() {
+  async function loadImages(): Promise<void> {
     await fetchNextPage();
   }
 
